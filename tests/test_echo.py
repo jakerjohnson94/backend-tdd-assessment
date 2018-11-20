@@ -85,6 +85,12 @@ class TestEcho(unittest.TestCase):
                                    stdout=subprocess.PIPE)
         stdout, _ = process.communicate()
 
+        # test with some but not all flags
+        args.remove('-t')
+        formatted_word = 'hello!'
+        process = subprocess.Popen(args,
+                                   stdout=subprocess.PIPE)
+        stdout, _ = process.communicate()
         self.assertEqual(stdout.strip(), formatted_word)
 
     def test_no_flags(self):

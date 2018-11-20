@@ -35,14 +35,19 @@ def main():
     text = args.text
     if args.upper and args.lower and args.title:
         text = text.upper().lower().capitalize()
+    elif args.upper and args.lower:
+        text = text.upper().lower()
+    elif args.lower and args.title:
+        text = text.lower().capitalize()
+    elif args.upper and args.title:
+        text = text.upper().capitalize()
     elif args.upper:
         text = text.upper()
     elif args.lower:
         text = text.lower()
     elif args.title:
         text = text.capitalize()
-    elif not args.upper and not args.lower and not args.title:
-        text = args.text
+
     return text
 
 
