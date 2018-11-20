@@ -1,0 +1,7 @@
+{
+  "python.unitTest.unittestArgs": ["-v", "-s", "./tests", "-p", "*test*.py"],
+  "python.unitTest.pyTestEnabled": false,
+  "python.unitTest.nosetestsEnabled": false,
+  "python.unitTest.unittestEnabled": true,
+  "python.pythonPath": "/usr/local/opt/python@2/bin/python2.7"
+}
